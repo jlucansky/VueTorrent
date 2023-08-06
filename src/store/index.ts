@@ -62,7 +62,7 @@ const desktopPropertiesTemplate = [
 
 const mobilePropertiesTemplate = [
   { name: DashboardProperty.STATUS, active: true },
-  { name: DashboardProperty.TRACKER, active: true },
+  { name: DashboardProperty.TRACKER, active: false },
   { name: DashboardProperty.CATEGORY, active: true },
   { name: DashboardProperty.TAGS, active: true },
   { name: DashboardProperty.SIZE, active: true },
@@ -105,8 +105,8 @@ export default new Vuex.Store<StoreState>({
     settings: {} as AppPreferences,
     sort_options: {
       isCustomSortEnabled: false,
-      sort: 'priority',
-      reverse: false,
+      sort: 'added_on',
+      reverse: true,
       filter: null,
       category: null,
       tag: null,
@@ -133,9 +133,9 @@ export default new Vuex.Store<StoreState>({
       rightDrawer: false,
       topPagination: false,
       paginationSize: 15,
-      dateFormat: 'DD/MM/YYYY, HH:mm:ss',
+      dateFormat: 'DD.MM.YYYY, HH:mm:ss',
       openSideBarOnStart: true,
-      showShutdownButton: true,
+      showShutdownButton: false,
       useBitSpeed: false,
       useBinaryUnits: false,
       refreshInterval: 2000,
