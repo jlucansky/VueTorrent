@@ -260,10 +260,14 @@ export class QBitApi {
   }
 
   async pauseTorrents(hashes: string[]): Promise<void> {
+    if (!hashes.length) return
+
     return this.torrentAction('pause', hashes)
   }
 
   async resumeTorrents(hashes: string[]): Promise<void> {
+    if (!hashes.length) return
+
     return this.torrentAction('resume', hashes)
   }
 
