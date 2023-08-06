@@ -8,6 +8,7 @@ import type { LoginPayload } from '@/types/qbit/payloads'
 export default {
   INIT_INTERVALS: async (store: Store<StoreState>) => {
     store.commit('REMOVE_INTERVALS')
+    store.commit('updateMainData')
     store.state.intervals.push(
       setInterval(() => {
         store.commit('updateMainData')
