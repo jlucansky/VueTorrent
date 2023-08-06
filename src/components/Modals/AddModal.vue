@@ -72,7 +72,6 @@
                 </v-col>
               </v-row>
 
-              <v-combobox v-model="tags" :items="availableTags" clearable :label="$t('tags')" :prepend-icon="mdiTag" multiple chips />
               <v-combobox v-model="category" :items="availableCategories" clearable :label="$t('category')" item-text="name" :prepend-icon="mdiLabel" @input="categoryChanged" />
 
               <v-text-field

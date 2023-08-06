@@ -150,12 +150,6 @@
         </v-list-item>
       </v-list>
     </v-menu>
-    <v-list-item v-else>
-      <v-icon>{{ mdiTagOff }}</v-icon>
-      <v-list-item-title class="ml-2 list-item__title">
-        {{ $t('rightClick.notags') | capitalize }}
-      </v-list-item-title>
-    </v-list-item>
     <v-menu
       v-if="availableCategories.length > 1"
       :open-on-hover="!touchmode"
